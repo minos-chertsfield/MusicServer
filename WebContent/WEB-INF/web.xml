@@ -9,4 +9,23 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <!-- 部署注册请求服务 -->
+  <servlet>
+  	<servlet-name>registerService</servlet-name>
+  	<servlet-class>com.minos.service.registerService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>registerService</servlet-name>
+  	<url-pattern>/registerService.do</url-pattern>
+  </servlet-mapping>
+  <!-- 部署登录请求服务 -->
+<servlet>
+  	<servlet-name>loginService</servlet-name>
+  	<servlet-class>com.minos.service.loginService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginService</servlet-name>
+  	<url-pattern>/loginService.do</url-pattern>
+  </servlet-mapping>
+
 </web-app>
