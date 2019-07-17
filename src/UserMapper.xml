@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.minos.model.UserMapper">
+	<!-- 查询相关操作 -->
+	<select id="queryAll" resultType="com.minos.bean.User">
+		select * from `user`
+	</select>
+
+	<select id="queryByMac" parameterType="String" resultType="com.minos.bean.User">
+		select * from `user` where mac = #{mac}
+	</select>
+	
+	<select id="queryByUid" parameterType="String" resultType="com.minos.bean.User">
+		select * from `user` where uid = #{uid}
+    </select>
+    
+    <select id="queryByEmail" parameterType="String" resultType="com.minos.bean.User">
+		select * from `user` where email = #{email}
+    </select>
+    
+    <select id="queryByMobile" parameterType="String" resultType="com.minos.bean.User">
+    	select * from `user` where mobile = #{mobile}
+    </select>
+    
+    <!-- 插入相关操作 -->
+    <insert id="insertUser" parameterType="com.minos.bean.User">
+    	insert into `user` (mac,uid,password,grade,address,birth,email,headLink,mobile) values (#{mac},#{uid},#{password},#{grade},#{address},#{birth},#{email},#{headLink},#{mobile})
+    </insert>
+    
+    <!-- 删除相关操作 -->
+    <delete id="deleteUserByUid" parameterType="String">
+    	delete from `user` where uid = #{uid}
+    </delete>
+    
+    <delete id="deleteUserByMac" parameterType="String">
+    	delete from `user` where mac = #{mac}
+    </delete>
+    
+    <!-- 修改相关操作 -->
+    <update id="updateUser" parameterType="com.minos.bean.User">
+    	update `user` set mac = #{mac},uid = #{uid},password = #{password},grade = #{grade},address = #{address},birth = #{birth},email = #{email},headLink = #{headLink},mobile = #{mobile}
+    </update>
+    
+</mapper>
+
