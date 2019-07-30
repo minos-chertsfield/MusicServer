@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.minos.model.VideoInfoMapper">
+	<!-- 查询操作 -->
+	<select id="queryAll" resultType="com.minos.bean.VideoInfo">
+		select * from `video_info`
+	</select>
+	
+	<select id="queryByTitle" parameterType="String" resultType="com.minos.bean.VideoInfo">
+		select * from `video_info` where title = #{title}
+	</select>
+
+	<select id="queryByArtist" parameterType="String" resultType="com.minos.bean.VideoInfo">
+		select * from `video_info` where artist = #{artist}
+	</select>
+	
+	<select id="queryById" parameterType="long" resultType="com.minos.bean.VideoInfo">
+		select * from `video_info` where id = #{id}
+	</select>
+	
+	<select id="queryAllOrderByHot" resultType="com.minos.bean.VideoInfo">
+		select * from `video_info` order by hot
+	</select>
+	<!-- 插入操作 -->
+	<insert id="insertVideo" parameterType="com.minos.bean.VideoInfo">
+		insert into `video_info` (id,duration,size,url,artist,title,hot,time,preview) values (#{id},#{duration},#{size},#{url},#{artist},#{title},#{hot},#{time},#{preview})
+	</insert>
+	<!-- 删除操作 -->
+	<delete id="deleteVideoById" parameterType="long">
+		delete from `video_info` where id = #{id}
+	</delete>
+	
+	<delete id="deleteVideoByTitle" parameterType="String">
+		delete from `video_info` where title = #{title}
+	</delete>
+	
+	<delete id="deleteVideoByArtist" parameterType="String">
+		delete from `video_info` where artist = #{artist}
+	</delete>
+	<!-- 修改操作 -->
+	<update id="updateVideo" parameterType="com.minos.bean.VideoInfo">
+		update `video_info` set id = #{id},duration = #{duration},size = #{size},url = #{url},artist = #{artist},title = #{title},hot = #{hot},time = #{time},preview = #{preview}
+	</update>
+</mapper>
