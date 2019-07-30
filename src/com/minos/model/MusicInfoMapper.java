@@ -17,7 +17,7 @@ public interface MusicInfoMapper {    //音乐信息的映射接口
 		boolean deleteMusicById(long id);   //根据id删除音乐
 		boolean deleteMusicByAlbum(String album);   //根据专辑删除音乐
 		boolean deleteMusicByTitle(String title);   //根据音乐名删除音乐
-		boolean deleteUserByArtist(String artist);   //根据用户手机号码删除用户
+		boolean deleteMusicByArtist(String artist);   //根据用户手机号码删除用户
 		//------------修改操作------------
 		boolean updateMusic(MusicInfo musicInfo);   //更新音乐信息
 }

@@ -13,7 +13,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.minos.bean.User;
 
 
-public class userModel {   //注册数据类
+public class userModel {   //用户数据类
 	
 	
 	private SqlSessionFactory sqlSessionFactory;
@@ -78,6 +78,11 @@ public class userModel {   //注册数据类
 			flag = false;
 		}
 		return flag;
+	}
+	
+	public String insertHeadLink(String headLink) {
+		//TODO 
+		return null;
 	}
 	
 }

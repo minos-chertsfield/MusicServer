@@ -64,6 +64,8 @@ public class loginService extends HttpServlet {
         String result = "";
         PrintWriter out = response.getWriter();
         
+        System.out.println("传过来的" + uid);
+        System.out.println("数据库的" + user.getUid());
         if (user.getUid().equals(uid) && user.getPassword().equals(password)) {
 			result = gson.toJson(user);      //登录成功，回传对象
 		} else {
