@@ -4,17 +4,18 @@ package com.minos.bean;
  * Created by admini
  * on 2019/7/12
  */
-public class VideoInfo {   //瑙嗛淇℃伅绫�
 
-    private long id;    //鍞竴鏍囪瘑
-    private long duration;   //瑙嗛鏃堕暱
-    private long size;    //瑙嗛鏂囦欢澶у皬
-    private String url;   //瑙嗛鏂囦欢鐨剈rl
-    private String artist;   //鑹烘湳瀹跺悕绉�
-    private String title;    //瑙嗛鍚嶇О
-    private int hot;    //瑙嗛鐑害
-    private String time;   //瑙嗛涓婁氦鏃堕棿
-    private String preview;   //瑙嗛棰勮鍥�
+public class VideoInfo {   //视频信息类
+
+    private long id;    //唯一标识
+    private long duration;   //视频时长
+    private long size;    //视频文件大小
+    private String url;   //视频文件的url
+    private String artist;   //艺术家名称
+    private String title;    //视频名称
+    private int hot;    //视频热度
+    private String time;   //视频上交时间
+    private String preview;   //视频预览图
 
     public VideoInfo() {
     }

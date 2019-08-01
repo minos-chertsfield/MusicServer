@@ -36,4 +36,22 @@
   	<servlet-name>discoverService</servlet-name>
   	<url-pattern>/discoverService.do</url-pattern>
   </servlet-mapping>
+<!-- 加载好友服务 -->
+  <servlet>
+  	<servlet-name>friendService</servlet-name>
+  	<servlet-class>com.minos.service.friendService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>friendService</servlet-name>
+  	<url-pattern>/friendService.do</url-pattern>
+  </servlet-mapping>
+ <!-- 视频服务 -->
+ <servlet>
+  	<servlet-name>videoService</servlet-name>
+  	<servlet-class>com.minos.service.videoService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>videoService</servlet-name>
+  	<url-pattern>/videoService.do</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -22,6 +22,7 @@
 	<mappers>
 	     <mapper resource="UserMapper.xml" />
 	     <mapper resource="MusicInfoMapper.xml"/>
+	     <mapper resource="VideoInfoMapper.xml"/>
 	</mappers>
 </configuration>
 
